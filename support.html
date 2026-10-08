@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patlat! — Destek & SSS / Support & FAQ</title>
+  <meta name="description" content="Patlat! mobil oyunu destek, sıkça sorulan sorular (SSS) ve iletişim sayfası.">
+  <style>
+    :root {
+      --primary: #26346B;
+      --primary-hover: #35478f;
+      --primary-dark: #182247;
+      --accent: #FFC93C;
+      --accent-hover: #e5b32f;
+      --accent-soft: rgba(255, 201, 60, 0.18);
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --badge-bg: #eef2ff;
+      --badge-text: #26346B;
+      --radius: 12px;
+      --shadow: 0 4px 18px rgba(38, 52, 107, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1120;
+        --card-bg: #151f38;
+        --text: #f8fafc;
+        --text-muted: #94a3b8;
+        --border: #243256;
+        --badge-bg: #1c2748;
+        --badge-text: #FFC93C;
+        --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 0 0 60px 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #ffffff;
+      padding: 40px 20px 32px;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .brand-title {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-badge {
+      background-color: var(--accent);
+      color: #1a2238;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 600px;
+      margin: 0 auto 18px;
+    }
+
+    .meta-bar {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 8px 16px;
+      border-radius: 999px;
+    }
+
+    .lang-switcher-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .lang-switcher {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 6px 14px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 8px;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: var(--badge-bg);
+      color: var(--badge-text);
+      border-color: var(--accent);
+    }
+
+    .nav-btn.active {
+      background-color: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .home-link {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .home-link {
+        color: var(--accent);
+      }
+    }
+
+    main {
+      max-width: 860px;
+      margin: 32px auto 0;
+      padding: 0 16px;
+    }
+
+    .support-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    h2.section-header {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 10px;
+      margin-bottom: 24px;
+    }
+    @media (prefers-color-scheme: dark) {
+      h2.section-header {
+        color: var(--accent);
+      }
+    }
+
+    .faq-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin-bottom: 18px;
+      background: var(--card-bg);
+      transition: border-color 0.2s ease;
+    }
+
+    .faq-item:hover {
+      border-color: var(--primary);
+    }
+
+    .faq-question {
+      font-size: 1.12rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .faq-question {
+        color: var(--accent);
+      }
+    }
+
+    .faq-answer {
+      color: var(--text);
+      font-size: 0.96rem;
+    }
+
+    .faq-answer p {
+      margin-bottom: 10px;
+    }
+
+    .faq-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-card {
+      background: var(--badge-bg);
+      border: 2px dashed var(--accent);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .contact-card h3 {
+      color: var(--text);
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    .email-badge {
+      display: inline-block;
+      margin: 12px 0;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      padding: 10px 22px;
+      background: var(--accent);
+      border-radius: 999px;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .email-badge:hover {
+      background: var(--accent-hover);
+      transform: translateY(-2px);
+      color: #12182b;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 24px 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      .support-section {
+        padding: 24px 18px;
+      }
+      .brand-title {
+        font-size: 1.6rem;
+      }
+      .lang-switcher {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand-title">
+    <span>Patlat!</span>
+    <span class="brand-badge">Destek / Support</span>
+  </div>
+  <p class="subtitle">Yardım Merkezi & Sıkça Sorulan Sorular / Help Center & FAQ</p>
+  <div class="meta-bar">
+    <span><strong>Geliştirici / Developer:</strong> Hamza ALMALI (NoName Games)</span>
+    <span>•</span>
+    <span><strong>Paket / Bundle ID:</strong> com.nonamegames.patlat</span>
+    <span>•</span>
+    <span><strong>E-posta:</strong> asismuhendislik@gmail.com</span>
+  </div>
+</header>
+
+<div class="lang-switcher-container">
+  <div class="lang-switcher">
+    <a href="index.html" class="home-link">← Ana Sayfa / Home</a>
+    <div class="nav-links">
+      <a href="#tr" class="nav-btn active">Türkçe (TR)</a>
+      <a href="#en" class="nav-btn">English (EN)</a>
+      <a href="privacy.html" class="nav-btn">Gizlilik / Privacy</a>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <!-- ==================== TÜRKÇE DESTEK ==================== -->
+  <section id="tr" class="support-section">
+    <h2 class="section-header">Sıkça Sorulan Sorular (SSS)</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>❓</span>
+        <span>Oyun ilerlemem ve elmaslarım nasıl kaydedilir?</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          <strong>Patlat!</strong> oyuncu gizliliğini korumak amacıyla harici bir sunucuya üyelik veya hesap gerektirmez. Açtığınız haritalar, kule seviyeleriniz, mevcut elmas bakiyeniz ve ayarlarınız doğrudan cihazınızın yerel hafızasında (<strong>PlayerPrefs</strong>) saklanır.
+        </p>
+        <p>
+          Skorlarınız ise Apple Game Center (iOS) veya Google Play Games (Android) hesabınız aktifse doğrudan resmi liderlik tablolarına aktarılır.
+        </p>
+        <p>
+          <em>Önemli Hatırlatma:</em> Oyunu cihazınızdan tamamen kaldırırsanız (silerseniz), yerel olarak tutulan oyun ilerlemesi ve elmaslar işletim sistemi tarafından cihazınızdan temizlenir.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>💎</span>
+        <span>Satın alımları nasıl geri yüklerim (Restore Purchases)?</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Oyunda sunulan elmas paketleri <strong>tüketilebilir (consumable)</strong> sanal ürünlerdir. Apple App Store ve Google Play politikaları gereğince, tüketilebilir ürünler yeni bir cihaza geçildiğinde standart "Satın Alımları Geri Yükle" butonuyla otomatik olarak geri çağrılamaz.
+        </p>
+        <p>
+          Ancak bir satın alma işlemi yaptığınız halde elmaslarınız hesabınıza yansımadıysa veya ödeme hatası oluştuysa:
+        </p>
+        <ul>
+          <li>Apple App Store faturanız veya Google Play sipariş numaranız (GPA.xxxx-xxxx-xxxx) ile birlikte,</li>
+          <li><a href="mailto:asismuhendislik@gmail.com">asismuhendislik@gmail.com</a> adresinden bizimle iletişime geçebilirsiniz. En kısa sürede inceleyip yardımcı olacağız.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>🎬</span>
+        <span>Ödüllü reklamı izledim fakat ödül (elmas/hak) gelmedi, ne yapmalıyım?</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Google AdMob ödüllü reklamlarında ödülün tanımlanabilmesi için şu koşulların sağlanması gerekir:
+        </p>
+        <ul>
+          <li><strong>Reklamı sonuna kadar izleyin:</strong> Reklam videosunu erken kapatırsanız veya atlama tuşuna basarsanız ödül verilemez. Reklam bittiğinde beliren kapatma (X) simgesine dokununuz.</li>
+          <li><strong>İnternet bağlantınızı kontrol edin:</strong> Reklam sağlayıcısının ödül doğrulama sinyalini gönderebilmesi için stabil bir internet bağlantısı şarttır.</li>
+          <li><strong>Oyunu yeniden başlatın:</strong> Geçici bir ağ gecikmesi varsa uygulamayı tamamen kapatıp yeniden açmak durumu düzeltecektir.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>🎮</span>
+        <span>Patlat! internetsiz (çevrimdışı) oynanabilir mi?</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Evet! Patlat! temel kule savunma mekanikleriyle tamamen çevrimdışı oynanabilir. Ancak liderlik tablolarına skor göndermek, elmas satın almak veya isteğe bağlı ödüllü reklam izlemek için internet bağlantısı gerekmektedir.
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h3>Doğrudan İletişim & Hata Bildirimi</h3>
+      <p>Karşılaştığınız teknik bir aksaklık, öneri veya destek talebiniz için bize e-posta gönderebilirsiniz:</p>
+      <a href="mailto:asismuhendislik@gmail.com?subject=Patlat!%20Destek%20Talebi" class="email-badge">✉️ asismuhendislik@gmail.com</a>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">
+        Geliştirici: Hamza ALMALI (NoName Games) • Sorularınız en geç 24-48 saat içinde yanıtlanır.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ==================== ENGLISH SUPPORT ==================== -->
+  <section id="en" class="support-section">
+    <h2 class="section-header">Frequently Asked Questions (FAQ)</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>❓</span>
+        <span>How is my game progress and diamond balance saved?</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          To protect user privacy, <strong>Patlat!</strong> does not require any account creation or login. Your unlocked maps, animal tower upgrade tiers, in-game diamond balance, and sound settings are stored locally on your device via <strong>PlayerPrefs</strong>.
+        </p>
+        <p>
+          Your high scores are submitted to the official Apple Game Center (iOS) or Google Play Games (Android) leaderboards if your device is logged into those respective services.
+        </p>
+        <p>
+          <em>Important Note:</em> If you uninstall (delete) the app from your device, your local game save and diamond data will be deleted by the operating system.
+        </p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>💎</span>
+        <span>How do I restore in-app purchases?</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          In-game diamond packs are classified as <strong>consumable</strong> products. According to Apple App Store and Google Play guidelines, consumable items are used up during gameplay and are not automatically restorable across fresh installations via a standard "Restore" button.
+        </p>
+        <p>
+          However, if a transaction succeeded on your account but the diamonds were not credited due to a connection interruption:
+        </p>
+        <ul>
+          <li>Please locate your official purchase receipt or order number (e.g., Google Play Order ID GPA.xxxx-xxxx-xxxx or Apple receipt),</li>
+          <li>Email us at <a href="mailto:asismuhendislik@gmail.com">asismuhendislik@gmail.com</a>. We will gladly inspect the issue and assist you.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>🎬</span>
+        <span>I watched a rewarded ad but didn't receive the reward. What should I do?</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          To ensure Google AdMob successfully registers reward completion, please check the following:
+        </p>
+        <ul>
+          <li><strong>Watch the entire video:</strong> If you exit the video early or press skip before completion, no reward will be issued. Tap the close (X) button only once the ad finishes.</li>
+          <li><strong>Verify your internet connection:</strong> An active and stable network is required to authenticate the reward callback.</li>
+          <li><strong>Restart the app:</strong> If there was a momentary network timeout, relaunching the app may refresh your in-game balance.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        <span>🎮</span>
+        <span>Can I play Patlat! offline without internet?</span>
+      </div>
+      <div class="faq-answer">
+        <p>
+          Yes! You can enjoy full balloon tower defense gameplay completely offline anytime, anywhere. An internet connection is only needed when submitting leaderboard scores, purchasing diamond packs, or watching optional rewarded videos.
+        </p>
+      </div>
+    </div>
+
+    <div class="contact-card">
+      <h3>Contact & Support Inquiries</h3>
+      <p>Have an issue, bug report, or feature suggestion? Reach out to us directly:</p>
+      <a href="mailto:asismuhendislik@gmail.com?subject=Patlat!%20Support%20Request" class="email-badge">✉️ asismuhendislik@gmail.com</a>
+      <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 8px;">
+        Developer: Hamza ALMALI (NoName Games) • Support inquiries are typically answered within 24-48 hours.
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Hamza ALMALI / NoName Games. All rights reserved. • Patlat! (com.nonamegames.patlat)</p>
+</footer>
+
+</body>
+</html>

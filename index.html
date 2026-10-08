@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patlat! — Balon Kule Savunması / Balloon Tower Defense</title>
+  <meta name="description" content="Patlat! mobil oyunu resmi web sayfası. Balon kule savunması, gizlilik politikası ve destek merkezi.">
+  <style>
+    :root {
+      --primary: #26346B;
+      --primary-hover: #35478f;
+      --primary-dark: #182247;
+      --accent: #FFC93C;
+      --accent-hover: #e5b32f;
+      --accent-soft: rgba(255, 201, 60, 0.18);
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --badge-bg: #eef2ff;
+      --badge-text: #26346B;
+      --radius: 14px;
+      --shadow: 0 6px 24px rgba(38, 52, 107, 0.09);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1120;
+        --card-bg: #151f38;
+        --text: #f8fafc;
+        --text-muted: #94a3b8;
+        --border: #243256;
+        --badge-bg: #1c2748;
+        --badge-text: #FFC93C;
+        --shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #ffffff;
+      padding: 56px 20px 48px;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+      position: relative;
+    }
+
+    .brand-icon {
+      font-size: 3rem;
+      margin-bottom: 8px;
+      display: inline-block;
+      filter: drop-shadow(0 4px 10px rgba(0,0,0,0.25));
+    }
+
+    .brand-title {
+      font-size: 2.8rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 10px;
+    }
+
+    .brand-title span {
+      color: var(--accent);
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: #cbd5e1;
+      max-width: 640px;
+      margin: 0 auto 20px;
+      font-weight: 500;
+    }
+
+    .platforms-bar {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 6px;
+    }
+
+    .platform-pill {
+      background: rgba(255, 255, 255, 0.12);
+      color: #ffffff;
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    main {
+      flex: 1;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 36px 18px 20px;
+    }
+
+    .action-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .action-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      box-shadow: var(--shadow);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .action-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+      box-shadow: 0 10px 28px rgba(38, 52, 107, 0.16);
+    }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+
+    .card-icon {
+      font-size: 2rem;
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    @media (prefers-color-scheme: dark) {
+      .card-title {
+        color: var(--accent);
+      }
+    }
+
+    .card-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      flex: 1;
+      margin-bottom: 18px;
+    }
+
+    .card-action-text {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .card-action-text {
+        color: var(--accent);
+      }
+    }
+
+    .info-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .info-header {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .info-header {
+        color: var(--accent);
+      }
+    }
+
+    .info-text {
+      color: var(--text);
+      margin-bottom: 14px;
+      font-size: 0.98rem;
+    }
+
+    .features-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .feature-item {
+      background: var(--badge-bg);
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      border: 1px solid var(--border);
+    }
+
+    .feature-item strong {
+      color: var(--primary);
+      display: block;
+      margin-bottom: 2px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .feature-item strong {
+        color: var(--accent);
+      }
+    }
+
+    footer {
+      background: var(--card-bg);
+      border-top: 1px solid var(--border);
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-top: auto;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+    @media (prefers-color-scheme: dark) {
+      footer a {
+        color: var(--accent);
+      }
+    }
+
+    .footer-meta {
+      margin-top: 8px;
+      font-size: 0.82rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 40px 16px 36px;
+      }
+      .brand-title {
+        font-size: 2.2rem;
+      }
+      .subtitle {
+        font-size: 1.05rem;
+      }
+      .info-section {
+        padding: 24px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand-icon">🎈🛡️</div>
+  <h1 class="brand-title">Patlat<span>!</span></h1>
+  <p class="subtitle">Balon Kule Savunması / Tactical Balloon Tower Defense</p>
+  <div class="platforms-bar">
+    <span class="platform-pill">🍏 Apple iOS (App Store)</span>
+    <span class="platform-pill">🤖 Google Android (Google Play)</span>
+    <span class="platform-pill">📦 com.nonamegames.patlat</span>
+  </div>
+</header>
+
+<main>
+
+  <!-- Quick Action Navigation -->
+  <section class="action-grid">
+    <a href="privacy.html" class="action-card">
+      <div class="card-top">
+        <span class="card-icon">🛡️</span>
+        <h2 class="card-title">Gizlilik Politikası / Privacy Policy</h2>
+      </div>
+      <p class="card-desc">
+        Kişisel veri toplamama politikamız, cihaz içi yerel kayıtlar (PlayerPrefs), isteğe bağlı Google AdMob ödüllü reklamları, Game Center & Google Play Games entegrasyonu hakkında detaylı bilgilendirme.
+      </p>
+      <div class="card-action-text">
+        <span>Politikayı İncele (TR / EN)</span>
+        <span>→</span>
+      </div>
+    </a>
+
+    <a href="support.html" class="action-card">
+      <div class="card-top">
+        <span class="card-icon">💬</span>
+        <h2 class="card-title">Destek & SSS / Support & FAQ</h2>
+      </div>
+      <p class="card-desc">
+        İlerleme kaydı, elmas satın alımları, ödüllü reklam sorunları ve teknik destek talepleri için sıkça sorulan sorular ve doğrudan iletişim kanalı.
+      </p>
+      <div class="card-action-text">
+        <span>Yardım Merkezine Git (TR / EN)</span>
+        <span>→</span>
+      </div>
+    </a>
+  </section>
+
+  <!-- Turkish Game Overview -->
+  <article class="info-section">
+    <h2 class="info-header">🇹🇷 Oyun Hakkında</h2>
+    <p class="info-text">
+      <strong>Patlat!</strong>, dikey ekran formatında tek elle akıcı şekilde oynanabilen, zengin taktiksel derinliğe sahip modern bir 2D balon kule savunma oyunudur. 
+      Çayır, Kumsal, Karlı Vadi ve Volkan haritalarında sevimli hayvan kulelerini yerleştir, 30 tur boyunca güçlenen renkli balon dalgalarına karşı savunmanı kur ve dev Zeplin Boss'unu patlat!
+    </p>
+
+    <div class="features-list">
+      <div class="feature-item">
+        <strong>🦔 5 Özgün Hayvan Kulesi</strong>
+        Kirpi, Kaktüs, Kunduz, Penguen ve Baykuş.
+      </div>
+      <div class="feature-item">
+        <strong>🗺️ 4 Temalı Harita</strong>
+        Çayır, Kumsal, Karlı Vadi ve Volkan.
+      </div>
+      <div class="feature-item">
+        <strong>👑 Liderlik Tabloları</strong>
+        Apple Game Center ve Google Play Games.
+      </div>
+      <div class="feature-item">
+        <strong>✈️ Çevrimdışı Oynanış</strong>
+        İnternet bağlantısı olmadan her yerde oyna.
+      </div>
+      <div class="feature-item">
+        <strong>🔒 Gizlilik Odaklı</strong>
+        Hesap açma yok, kişisel verileriniz toplanmaz.
+      </div>
+      <div class="feature-item">
+        <strong>🎬 Yalnızca Ödüllü Reklam</strong>
+        Zorunlu reklam yok; yalnızca isteğe bağlı izleme.
+      </div>
+    </div>
+  </article>
+
+  <!-- English Game Overview -->
+  <article class="info-section">
+    <h2 class="info-header">🇬🇧 About the Game</h2>
+    <p class="info-text">
+      <strong>Patlat!</strong> is a vibrant, portrait-mode 2D balloon tower defense game designed for intuitive one-handed play.
+      Strategically deploy clever animal towers across Meadow, Beach, Snowy Valley, and Volcano maps. Survive 30 rounds of relentless balloon waves and defeat the giant Zeppelin Boss!
+    </p>
+
+    <div class="features-list">
+      <div class="feature-item">
+        <strong>🦔 5 Clever Animal Towers</strong>
+        Hedgehog, Cactus, Beaver, Penguin, and Owl.
+      </div>
+      <div class="feature-item">
+        <strong>🗺️ 4 Distinct Maps</strong>
+        Meadow, Beach, Snowy Valley, and Volcano.
+      </div>
+      <div class="feature-item">
+        <strong>👑 Global Leaderboards</strong>
+        Apple Game Center & Google Play Games Services.
+      </div>
+      <div class="feature-item">
+        <strong>✈️ Fully Playable Offline</strong>
+        Enjoy full defense action anywhere, anytime.
+      </div>
+      <div class="feature-item">
+        <strong>🔒 Privacy-First Design</strong>
+        No account required, no personal data harvested.
+      </div>
+      <div class="feature-item">
+        <strong>🎬 Purely Opt-In Rewarded Ads</strong>
+        No interstitial or forced ads; watch only for rewards.
+      </div>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 <strong>Hamza ALMALI / NoName Games</strong>. All rights reserved.</p>
+  <div class="footer-meta">
+    <span>Uygulama / App: <strong>Patlat!</strong> (<code>com.nonamegames.patlat</code>)</span>
+    <span> • </span>
+    <span>İletişim / Contact: <a href="mailto:asismuhendislik@gmail.com">asismuhendislik@gmail.com</a></span>
+  </div>
+</footer>
+
+</body>
+</html>

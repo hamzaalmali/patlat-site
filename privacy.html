@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patlat! — Gizlilik Politikası / Privacy Policy</title>
+  <meta name="description" content="Patlat! mobil oyunu gizlilik politikası ve kullanıcı verileri bilgilendirme sayfası (Privacy Policy).">
+  <style>
+    :root {
+      --primary: #26346B;
+      --primary-hover: #35478f;
+      --primary-dark: #182247;
+      --accent: #FFC93C;
+      --accent-hover: #e5b32f;
+      --accent-soft: rgba(255, 201, 60, 0.18);
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #0f172a;
+      --text-muted: #475569;
+      --border: #e2e8f0;
+      --badge-bg: #eef2ff;
+      --badge-text: #26346B;
+      --radius: 12px;
+      --shadow: 0 4px 18px rgba(38, 52, 107, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b1120;
+        --card-bg: #151f38;
+        --text: #f8fafc;
+        --text-muted: #94a3b8;
+        --border: #243256;
+        --badge-bg: #1c2748;
+        --badge-text: #FFC93C;
+        --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+      background-color: var(--bg);
+      color: var(--text);
+      padding: 0 0 60px 0;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: #ffffff;
+      padding: 40px 20px 32px;
+      text-align: center;
+      border-bottom: 4px solid var(--accent);
+    }
+
+    .brand-title {
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-badge {
+      background-color: var(--accent);
+      color: #1a2238;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      vertical-align: middle;
+    }
+
+    .subtitle {
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      max-width: 600px;
+      margin: 0 auto 18px;
+    }
+
+    .meta-bar {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      font-size: 0.85rem;
+      color: #e2e8f0;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 8px 16px;
+      border-radius: 999px;
+    }
+
+    .lang-switcher-container {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--card-bg);
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .lang-switcher {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav-btn {
+      display: inline-block;
+      text-decoration: none;
+      padding: 6px 14px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      border-radius: 8px;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: var(--badge-bg);
+      color: var(--badge-text);
+      border-color: var(--accent);
+    }
+
+    .nav-btn.active {
+      background-color: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+
+    .home-link {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    @media (prefers-color-scheme: dark) {
+      .home-link {
+        color: var(--accent);
+      }
+    }
+
+    main {
+      max-width: 860px;
+      margin: 32px auto 0;
+      padding: 0 16px;
+    }
+
+    .policy-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 36px 32px;
+      margin-bottom: 40px;
+      box-shadow: var(--shadow);
+    }
+
+    h2.section-header {
+      font-size: 1.65rem;
+      font-weight: 700;
+      color: var(--primary);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 10px;
+      margin-bottom: 24px;
+    }
+    @media (prefers-color-scheme: dark) {
+      h2.section-header {
+        color: var(--accent);
+      }
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin: 24px 0 10px;
+      color: var(--text);
+    }
+
+    p {
+      margin-bottom: 14px;
+      color: var(--text);
+    }
+
+    ul, ol {
+      margin-left: 22px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    a:hover {
+      color: var(--accent-hover);
+    }
+    @media (prefers-color-scheme: dark) {
+      a {
+        color: var(--accent);
+      }
+    }
+
+    .info-box {
+      background-color: var(--badge-bg);
+      border-left: 4px solid var(--accent);
+      padding: 14px 18px;
+      border-radius: 0 var(--radius) var(--radius) 0;
+      margin: 18px 0;
+      font-size: 0.95rem;
+    }
+
+    .key-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+      font-size: 0.92rem;
+    }
+
+    .key-table th, .key-table td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+    }
+
+    .key-table th {
+      background-color: var(--badge-bg);
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 24px 16px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 600px) {
+      .policy-section {
+        padding: 24px 18px;
+      }
+      .brand-title {
+        font-size: 1.6rem;
+      }
+      .lang-switcher {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand-title">
+    <span>Patlat!</span>
+    <span class="brand-badge">Gizlilik & Privacy</span>
+  </div>
+  <p class="subtitle">Balon Kule Savunması / Balloon Tower Defense</p>
+  <div class="meta-bar">
+    <span><strong>Geliştirici / Developer:</strong> Hamza ALMALI (NoName Games)</span>
+    <span>•</span>
+    <span><strong>Paket / Bundle ID:</strong> com.nonamegames.patlat</span>
+    <span>•</span>
+    <span><strong>Yürürlük / Effective Date:</strong> 9 Ekim 2026</span>
+  </div>
+</header>
+
+<div class="lang-switcher-container">
+  <div class="lang-switcher">
+    <a href="index.html" class="home-link">← Ana Sayfa / Home</a>
+    <div class="nav-links">
+      <a href="#tr" class="nav-btn active">Türkçe (TR)</a>
+      <a href="#en" class="nav-btn">English (EN)</a>
+      <a href="support.html" class="nav-btn">Destek / Support</a>
+    </div>
+  </div>
+</div>
+
+<main>
+
+  <!-- ==================== TÜRKÇE BÖLÜM ==================== -->
+  <article id="tr" class="policy-section">
+    <h2 class="section-header">Gizlilik Politikası (Türkçe)</h2>
+    <p><strong>Yürürlük Tarihi:</strong> 9 Ekim 2026</p>
+    <p>
+      Bu Gizlilik Politikası, <strong>Hamza ALMALI / NoName Games</strong> ("biz", "tarafımız" veya "geliştirici") tarafından geliştirilen <strong>Patlat!</strong> mobil oyunu (iOS ve Android, Paket Kimliği: <code>com.nonamegames.patlat</code>) için geçerlidir.
+      Gizliliğinize büyük önem veriyoruz. Bu metin, oyunumuzu kullandığınızda hangi bilgilerin işlendiğini ve gizliliğinizin nasıl korunduğunu açıkça açıklamak amacıyla hazırlanmıştır.
+    </p>
+
+    <div class="info-box">
+      <strong>Özet:</strong> Patlat! oyununda kullanıcı hesabı açma veya giriş yapma zorunluluğu yoktur. Geliştirici olarak hiçbir kişisel verinizi (ad, soyad, e-posta, telefon, konum vb.) toplamıyor ve kendi sunucularımızda saklamıyoruz. Oyun ilerlemeniz yalnızca kendi cihazınızda saklanır.
+    </div>
+
+    <h3>1. Toplanan Bilgiler ve Cihaz İçi Depolama</h3>
+    <p>
+      <strong>Kişisel Veri Toplamama İlkesi:</strong> Oyunumuzda profil oluşturma, üyelik veya e-posta ile giriş sistemi bulunmamaktadır. Bu nedenle doğrudan tarafımızca toplanan, saklanan veya işlenen hiçbir kişisel bilginiz yoktur.
+    </p>
+    <p>
+      <strong>Yerel Cihaz Depolaması (PlayerPrefs):</strong> Oyun seviyeleriniz, kule yükseltmeleriniz, kazanılan elmaslar, oyun içi ayarlar (ses, müzik) ve ulaşılan en yüksek skorlar tamamen cihazınızın yerel depolama alanında (Unity <code>PlayerPrefs</code>) tutulur. Bu veriler herhangi bir harici geliştirici sunucusuna aktarılmaz.
+    </p>
+
+    <h3>2. Üçüncü Taraf Hizmetleri ve Veri İşleme</h3>
+    <p>
+      Oyun deneyimini sağlamak, isteğe bağlı ödüller sunmak ve liderlik tablolarını yönetmek amacıyla sektör standardı güvenilir üçüncü taraf platformlar ve hizmet sağlayıcılar kullanılmaktadır:
+    </p>
+
+    <table class="key-table">
+      <thead>
+        <tr>
+          <th>Hizmet Sağlayıcı</th>
+          <th>Kullanım Amacı</th>
+          <th>Gizlilik Politikası</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Google AdMob</strong> (Google LLC)</td>
+          <td>Yalnızca kullanıcının kendi isteğiyle izlediği ödüllü reklamların sunulması. Reklam kimliği ve cihaz teknik verilerini işleyebilir.</td>
+          <td>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Gizlilik Politikası</a><br>
+            <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">Google İş Ortakları Kuralları</a>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Apple Game Center</strong> (Apple Inc.)</td>
+          <td>iOS platformunda isteğe bağlı skor tabloları (leaderboards) ve başarımların senkronizasyonu.</td>
+          <td>
+            <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Gizlilik Politikası</a>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Google Play Games Services</strong> (Google LLC)</td>
+          <td>Android platformunda isteğe bağlı skor tabloları ve başarımların senkronizasyonu.</td>
+          <td>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Gizlilik Politikası</a>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Apple App Store & Google Play İçi Faturalandırma</strong></td>
+          <td>Oyun içi elmas paketlerinin güvenli satın alım işlemleri.</td>
+          <td>
+            Apple ve Google ödeme altyapıları tarafından doğrudan yönetilir.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>3. Reklamlar ve İzinler (Google AdMob Ödüllü Reklamlar)</h3>
+    <p>
+      Oyunumuzda oyuncu deneyimini bölmemek adına <strong>zorunlu tam ekran (interstitial) reklam veya aniden çıkan zorunlu pop-up reklam bulunmamaktadır</strong>.
+    </p>
+    <ul>
+      <li><strong>Yalnızca İsteğe Bağlı Ödüllü Reklamlar:</strong> Reklamlar yalnızca oyuncunun kendi iradesiyle bir butona tıklayarak ödül (ekstra elmas/hak) kazanmak istemesi durumunda yüklenir ve oynatılır.</li>
+      <li><strong>Reklam Kimlikleri (IDFA / AAID):</strong> Google AdMob, reklam performansı ve sıklık sınırlandırması için cihazınıza ait reklam tanımlayıcısını (Apple IDFA veya Google Reklam Kimliği AAID) kullanabilir.</li>
+      <li><strong>App Tracking Transparency (iOS):</strong> iOS 14.5 ve üzeri cihazlarda, kişiselleştirilmiş reklam gösterimi için Apple'ın Takip İzni (ATT) istemi gösterilir. Bu izni vermeyi reddederseniz reklam izlemeye devam edebilirsiniz; ancak size yalnızca <em>kişiselleştirilmemiş (genel)</em> reklamlar sunulur.</li>
+    </ul>
+
+    <h3>4. Uygulama İçi Satın Alımlar (In-App Purchases)</h3>
+    <p>
+      Patlat! içinde isteğe bağlı olarak sanal elmas paketleri satın alınabilir. Satın alma işlemleri tamamen Apple (App Store In-App Purchase) veya Google (Google Play Billing) altyapısı üzerinden yürütülür.
+    </p>
+    <p>
+      Geliştirici olarak kredi kartı numaranız, banka bilgileriniz veya fatura adresiniz tarafımıza <strong>asla ulaşmaz ve tarafımızca saklanmaz</strong>. Yalnızca işlemin başarıyla tamamlandığına dair mağaza onay kodu alınarak oyun içi elmaslarınız bakiyenize eklenir.
+    </p>
+
+    <h3>5. Çocukların Gizliliği (COPPA / GDPR-K)</h3>
+    <p>
+      Oyunumuz özellikle 13 yaş altı çocuklara yönelik olarak tasarlanmamıştır; genel oyuncu kitlesine hitap eder ve mağaza derecelendirmesi olarak <strong>9+</strong> yaş grubu hedeflenmiştir. 
+      Bilerek 13 yaşın (veya ilgili yargı bölgesinde geçerli olan yaş sınırının) altındaki çocuklardan herhangi bir kişisel veri toplamıyoruz. Bir ebeveyn veya yasal vasi olarak çocuğunuzun üçüncü taraf hizmetler aracılığıyla kişisel bilgi paylaştığını düşünüyorsanız, lütfen bizimle iletişime geçiniz.
+    </p>
+
+    <h3>6. Verilerin Saklanması, Silinmesi ve Kullanıcı Kontrolü</h3>
+    <ul>
+      <li><strong>Yerel Verilerin Silinmesi:</strong> Oyun ilerlemesi, puanlar ve satın alınan içerik kayıtları yalnızca cihazınızda tutulduğundan, <strong>Patlat! uygulamasını cihazınızdan kaldırdığınızda bu veriler otomatik olarak tamamen silinir</strong>.</li>
+      <li><strong>Reklam Kimliğini Sıfırlama:</strong> Reklam kimliğinizi cihaz ayarlarınızdan dilediğiniz an sıfırlayabilir veya sınırlandırabilirsiniz:
+        <ul>
+          <li><strong>iOS:</strong> Ayarlar > Gizlilik ve Güvenlik > Takip bölümünden izinleri yönetebilirsiniz.</li>
+          <li><strong>Android:</strong> Ayarlar > Google > Reklamlar bölümünden Reklam Kimliğini silebilir veya sıfırlayabilirsiniz.</li>
+        </ul>
+      </li>
+      <li><strong>Skor Tablosu Verileri:</strong> Apple Game Center veya Google Play Games profilinize bağlı skorları ilgili mağaza hesap ayarlarınızdan yönetebilirsiniz.</li>
+    </ul>
+
+    <h3>7. Gizlilik Politikasında Değişiklikler</h3>
+    <p>
+      Geliştirici, yasal düzenlemeler veya oyun güncellemeleri doğrultusunda bu Gizlilik Politikasını zaman zaman güncelleyebilir. Değişiklikler bu web sayfasında yeni yürürlük tarihi ile birlikte yayınlanacaktır.
+    </p>
+
+    <h3>8. İletişim</h3>
+    <p>
+      Gizlilik Politikamız veya veri uygulamalarımız hakkında sorularınız, geri bildirimleriniz veya talepleriniz için bizimle doğrudan iletişime geçebilirsiniz:
+    </p>
+    <ul>
+      <li><strong>Geliştirici:</strong> Hamza ALMALI / NoName Games</li>
+      <li><strong>E-posta:</strong> <a href="mailto:asismuhendislik@gmail.com">asismuhendislik@gmail.com</a></li>
+      <li><strong>Uygulama:</strong> Patlat! (com.nonamegames.patlat)</li>
+    </ul>
+  </article>
+
+
+  <!-- ==================== ENGLISH SECTION ==================== -->
+  <article id="en" class="policy-section">
+    <h2 class="section-header">Privacy Policy (English)</h2>
+    <p><strong>Effective Date:</strong> October 9, 2026</p>
+    <p>
+      This Privacy Policy applies to the mobile game <strong>Patlat!</strong> (iOS & Android, Bundle ID: <code>com.nonamegames.patlat</code>), developed and published by <strong>Hamza ALMALI / NoName Games</strong> ("we", "us", or "our").
+      We respect your privacy and are committed to protecting it. This document clearly details how information is handled when you play our game.
+    </p>
+
+    <div class="info-box">
+      <strong>Summary:</strong> Patlat! does not require an account or registration. As the developer, we do NOT collect, store, or transmit your personal data (name, email, location, phone number, etc.) on our own servers. Your game progress is stored entirely on your local device.
+    </div>
+
+    <h3>1. Information Collected & Local Storage</h3>
+    <p>
+      <strong>No Personal Data Collection:</strong> We do not require account creation, profile setup, or email login. Consequently, we do not directly collect, hold, or sell any personal data belonging to players.
+    </p>
+    <p>
+      <strong>Local On-Device Storage (PlayerPrefs):</strong> All game progress, tower upgrades, accumulated diamonds, audio preferences, and high scores are saved locally on your device via Unity <code>PlayerPrefs</code>. This information never leaves your device to any custom developer servers.
+    </p>
+
+    <h3>2. Third-Party Services & Data Processors</h3>
+    <p>
+      To deliver core game functionality, optional rewarded experiences, and global leaderboard rankings, we rely on established third-party services:
+    </p>
+
+    <table class="key-table">
+      <thead>
+        <tr>
+          <th>Service Provider</th>
+          <th>Purpose</th>
+          <th>Privacy Policy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Google AdMob</strong> (Google LLC)</td>
+          <td>Serves opt-in rewarded video ads. May process device identifiers (IDFA/AAID) and technical diagnostics according to its policy.</td>
+          <td>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a><br>
+            <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information</a>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Apple Game Center</strong> (Apple Inc.)</td>
+          <td>Optional iOS leaderboard rankings and achievement synchronization.</td>
+          <td>
+            <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Google Play Games Services</strong> (Google LLC)</td>
+          <td>Optional Android leaderboard rankings and achievement synchronization.</td>
+          <td>
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Apple App Store & Google Play In-App Billing</strong></td>
+          <td>Secure processing of optional in-app diamond pack purchases.</td>
+          <td>
+            Managed directly and exclusively by Apple and Google.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>3. Advertisements & Permissions (Google AdMob Rewarded Ads)</h3>
+    <p>
+      We respect player immersion: <strong>there are NO mandatory interstitial ads and NO forced pop-up banners</strong> in Patlat!.
+    </p>
+    <ul>
+      <li><strong>Strictly Opt-In Rewarded Ads:</strong> Ads are only displayed when you voluntarily choose to tap a reward button (e.g., to earn extra diamonds or lives).</li>
+      <li><strong>Advertising Identifiers (IDFA / AAID):</strong> Google AdMob may utilize your mobile advertising identifier (Apple IDFA on iOS or Google Advertising ID on Android) for ad delivery, fraud prevention, and frequency capping.</li>
+      <li><strong>App Tracking Transparency (iOS):</strong> On iOS 14.5 and newer, the App Tracking Transparency prompt will request your permission. If you decline, you can still watch rewarded ads, but you will only receive <em>non-personalized (contextual)</em> ads.</li>
+    </ul>
+
+    <h3>4. In-App Purchases</h3>
+    <p>
+      Patlat! offers optional in-game consumable diamond packs. All financial transactions are processed entirely through the Apple App Store or Google Play Store billing APIs.
+    </p>
+    <p>
+      As the game developer, <strong>we never see, collect, or store your credit card, banking, or billing credentials</strong>. We only receive a cryptographic receipt confirming the purchase so that your in-game diamond balance can be credited.
+    </p>
+
+    <h3>5. Children's Privacy (COPPA & Global Standards)</h3>
+    <p>
+      Patlat! is not specifically directed toward children under 13 years of age. It is built for a general audience with an intended store rating of <strong>9+</strong>.
+      We do not knowingly collect personal identifiable information from children under 13 (or the applicable age in your jurisdiction). If you are a parent or guardian and believe a child has provided personal information to a third-party service through our app, please contact us immediately.
+    </p>
+
+    <h3>6. Data Retention, Deletion & User Rights</h3>
+    <ul>
+      <li><strong>Local Data Deletion:</strong> Because all game save data is stored locally on your device, <strong>uninstalling the Patlat! application permanently deletes all local save data</strong>.</li>
+      <li><strong>Resetting Advertising Identifiers:</strong> You can reset or disable ad tracking at any time in your device settings:
+        <ul>
+          <li><strong>iOS:</strong> Settings > Privacy & Security > Tracking.</li>
+          <li><strong>Android:</strong> Settings > Google > Ads > Reset or delete advertising ID.</li>
+        </ul>
+      </li>
+      <li><strong>Leaderboard Records:</strong> You can manage or disconnect leaderboard scores via your native Apple Game Center or Google Play Games account settings.</li>
+    </ul>
+
+    <h3>7. Changes to This Privacy Policy</h3>
+    <p>
+      We may update our Privacy Policy periodically to reflect app updates or regulatory adjustments. Any revisions will be published on this page along with an updated effective date.
+    </p>
+
+    <h3>8. Contact Us</h3>
+    <p>
+      If you have questions, inquiries, or feedback regarding this Privacy Policy, please contact:
+    </p>
+    <ul>
+      <li><strong>Developer:</strong> Hamza ALMALI / NoName Games</li>
+      <li><strong>Email:</strong> <a href="mailto:asismuhendislik@gmail.com">asismuhendislik@gmail.com</a></li>
+      <li><strong>Application:</strong> Patlat! (com.nonamegames.patlat)</li>
+    </ul>
+  </article>
+
+</main>
+
+<footer>
+  <p>&copy; 2026 Hamza ALMALI / NoName Games. All rights reserved. • Patlat! (com.nonamegames.patlat)</p>
+</footer>
+
+</body>
+</html>
